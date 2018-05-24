@@ -23,13 +23,13 @@ You must follow the steps below if you want to run this application only with Ma
 - Uncomment [Flapdoodle's](https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo) dependency on pom.xml file to run an embbeded MongoDB
 
 ```sh
-$ cd yawoen
+$ cd data-api
 $ vim pom.xml
 ```
 - Package and run the application with the following commands:
 
 ```sh
-cd yawoen
+cd data-api
 mvn package && java -jar target/data-api-1.0.0.jar
 ```
 During the startup of the application, a CSV file located under `src/main/resources` folder will be parsed and its data will be inserted on the database.
@@ -51,7 +51,7 @@ After the startup, the endpoints beneath will be available listening the port 80
 
 To perform tests with Maven, you need to execute the command:
 ```sh
-cd yawoen
+cd data-api
 mvn test
 ```
 
