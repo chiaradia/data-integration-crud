@@ -1,0 +1,3 @@
+spring.data.mongodb:
+  database: companies 
+  uri: mongodb://mongo:27017

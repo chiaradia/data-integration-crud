@@ -1,0 +1,173 @@
+{
+	"variables": [],
+	"info": {
+		"name": "data-integration",
+		"_postman_id": "137d506c-234a-4c1f-1206-79cf0885b187",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"description": "",
+			"item": [
+				{
+					"name": "Get specific company",
+					"request": {
+						"url": "localhost:8080/v1/companies/45",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\" : \"teste\",\n\t\"senha\" : \"1231465\",\n\t\"nome\" : \"nome\",\n\t\"email\" : \"email\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get companies list",
+					"request": {
+						"url": "localhost:8080/v1/companies",
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete company",
+					"request": {
+						"url": "localhost:8080/v1/companies/44",
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create company",
+					"request": {
+						"url": "localhost:8080/v1/companies",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"Microsoft\",\n\t\"zipCode\" : \"88888\",\n\t\"website\" : \"https://www.microsoft.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update company",
+					"request": {
+						"url": "localhost:8080/v1/companies/5b04d2373cc4de37c4f52d09",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"zipCode\" : \"82888\"\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search by attributes",
+					"request": {
+						"url": {
+							"raw": "localhost:8080/v1/companies/search?name=foun&zip=94002",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"companies",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "foun",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "zip",
+									"value": "94002",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post CSV file to merge",
+			"request": {
+				"url": "localhost:8080/v1/data",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv",
+							"value": "",
+							"description": "",
+							"type": "file"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
